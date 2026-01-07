@@ -1,0 +1,32 @@
+ALL IN VS CODE:
+
+.\setup_windows.ps1
+
+Manual commands setup_windows:
+
+python -m venv ai_venv
+
+.\ai_venv\Scripts\Activate.ps1
+
+(ai_venv) <- this should be in green and left most place
+
+pip install --upgrade pip
+
+pip install -r requirements.txt
+
+important step:
+
+python -m ipykernel install --user --name ai_venv --display-name "Python (ai_venv)"
+
+
+python -c "import torch, transformers, numpy; print('Environment OK')"
+
+In VS code:
+
+Ctrl + Shift + P
+-> Python: Select Interpreter
+-> Python (ai_venv)
+
+Kernel -> Python (ai_venv)
+
+
